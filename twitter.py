@@ -5,7 +5,7 @@ import json
 import sys
 
 def search_twitter (query='python'):
-	url = 'http://search.twitter.com/search.json?q=' + query
+	url = 'http://search.twitter.com/search.json?show_user&q=' + query
 	response = urllib.urlopen(url).read()
 	data = json.loads(response)
 	return data['results']
